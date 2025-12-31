@@ -6,8 +6,6 @@
 //      |   | \   \   |   | \   \  |---    ---|  /          |  |   |   |   |  |---|  |   | \   \
 //      |---|  \---\  |---|  \---\ |----------|  |---------/   |---|   |---|  |---|  |---|  \---\
 //
-// DISCLAMER!!!!!!!!
-// code may have certain cheeses, murder scenes, necromancy, cursed code, and bob
 
 package org.firstinspires.ftc.teamcode;
 
@@ -18,7 +16,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.Servo;
 
 @Autonomous
-public class DecodeAuto extends LinearOpMode {
+public class SpindexerTelemetry extends LinearOpMode {
     DcMotor Fleft = null;
     DcMotor Fright = null;
     DcMotor Bleft = null;
@@ -88,162 +86,9 @@ public class DecodeAuto extends LinearOpMode {
                 guys the murderd bot's light became blue!!! and there is NO BATTERY!!
          */
         if (opModeIsActive()) {
-
             resetEncoder();
-            forward(0.5, 150);
-            sleep(1000);
-            resetEncoder();
-            //turn towards red goal
-            turn(0.5, -140);
+            Spindexer(0.5, 200);
             sleeep(300);
-            sleeep(2000); //This simulates the time it takes to launch
-            turn(0.5, 140);
-            sleeep(300);//Previously 1000 milliseconds
-            forward(0.5, 580);
-            sleeep(750);
-            turn(0.5,726);
-            sleeep(1000);
-            backwardWintake(0.5, 1000);
-            sleeep(2000);
-            forward(0.5,1000);
-            Intake.setPower(0);
-            sleeep(2000);
-            turn(0.5,-726);
-            sleeep(1000);
-            forward(0.5, -570);
-            sleeep(750);
-            turn(0.5, -140);
-            sleeep(300);
-            sleeep(2000); //Simulates launch
-            turn(0.5, 280);
-            sleeep(300);
-            forward (1, 1000);
-            sleeep(1000);
-            /*forward(0.5, 1000);
-            sleeep(1000);
-            forward(0.5, -1000);
-            sleeep(1000);
-            strafe(1, -1000);
-            sleeep(100);*/
-
-
-            /*turn(0.5, 750); //Note to self - exact ticks needed for a 90 degree angle is 750. Sometimes it doesn't work. I wonder why...
-            sleeep(1000);
-            backwardWintake(0.5, 1800);
-            sleeep(1800);
-            forward(0.5, 1800);
-            sleeep(1200);
-            turn(0.5, -750);
-            sleeep(1000);
-            forward(0.5, -600);
-            sleeep(750);
-            turn(0.5, -170);*/
-
-
-            //launches big bouncy balls with holes towards goal
-
-            /*
-            // Create a new SimpleMotorFeedforward with gains kS, kV, and kA
-                  SimpleMotorFeedforward feedforward = new SimpleMotorFeedforward(kS, kV, kA);
-
-            // Calculates the feedforward for a velocity of 10 units/second
-            // and an acceleration of 20 units/second^2
-            // Units are determined by the units of the gains passed
-            // in at construction.
-                   feedforward.calculate(10, 20);
-             */
-            /*telemetry.addData("Launch1",Launch1.getCurrentPosition());
-            telemetry.update();
-            //sleeep(2500)
-            // 0, .146, 0.277
-
-            SimpleMotorFeedforward feedforward = new SimpleMotorFeedforward(0, 0.1125, 0.27); //ka=.27
-            // 4
-            double powerRating = feedforward.calculate(3.4);
-            //double powerRating2 = -1*(feedforward.calculate(3.4));
-            telemetry.addData("Launch1 powerRating: ", powerRating);
-            telemetry.update();
-            Launch1.setPower(powerRating);
-            sleep(1000);
-            Launch1.setPower(feedforward.calculate(4.6));
-            sleep(500);
-            Launch1.setPower(feedforward.calculate(4.3));
-            sleep(2000);
-            Launch1.setPower(0);*/
-
-
-            /*//turn to 90 degreese
-            turn(0.9, 882);
-            sleep(1000);
-            resetEncoder();
-            // strafe to first spike w/ balls
-            strafe(0.9, 800);
-            sleep(2000);
-            resetEncoder();
-            // collect balls on 1st spike
-            backwardWintake(0.75, 1000);
-            sleep(1200);
-            resetEncoder();
-            //go back to position before collecting
-            forward(0.75, 1000);
-            sleep(1200);
-            resetEncoder();
-            // go back to 90 degree position after launching
-            strafe(0.9, -800);
-            sleep(2000);
-            resetEncoder();
-            // turn towards goal
-            turn(0.9, -882);
-            sleep(1000);
-            resetEncoder();
-            //lAuNcH1!1!1!
-            launchWintake(0.9, 750);
-            sleep(2000);
-            // back to 90 degree
-            turn(0.9, 882);
-            sleep(1000);
-            resetEncoder();
-            //strafe to 2nd spike
-            strafe(0.9, 1700);
-            sleep(2000);
-            resetEncoder();
-            // suck up balls
-            backwardWintake(0.75,1000);
-            sleep(1200);
-            resetEncoder();
-            // go back to pos. before sucking up balls
-            forward(0.75, 1000);
-            sleep(1200);
-            resetEncoder();
-            // go back to 90 degree pos
-            strafe(0.9, -1700);
-            sleep(2000);
-            resetEncoder();
-            //turn towards goal
-            turn(0.9, -882);
-            sleep(1000);
-            resetEncoder();
-            //lAaAaUuUuNnNnCcCcHhHhHhHhHh!!!!!!!
-            launchWintake(1,750);
-            sleep(2000);
-            resetEncoder();
-            // turn towards murdered bot (murdered by snake_case)
-            turn(0.9,1000);
-            sleep(1200);
-            resetEncoder();
-            // push dead bot (rest in peace, comrade)
-            forward(0.9, -1000);
-            sleep(1200);
-            resetEncoder();
-
-            /*telemetry.addData("Fleft:",frontLeft.getCurrentPosition());
-            telemetry.addData("Fright:",frontRight.getCurrentPosition());
-            telemetry.addData("Bleft:",backLeft.getCurrentPosition());
-            telemetry.addData("Bright:",backRight.getCurrentPosition());
-            telemetry.addData("Launch1:",topLauncherMotor.getCurrentPosition());
-            telemetry.addData("Intake:",intake.getCurrentPosition());
-            telemetry.update();
-            sleep(5000);*/
         }
     }
 
@@ -429,6 +274,7 @@ public class DecodeAuto extends LinearOpMode {
         Bleft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         Bright.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         Launch1.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        Spindexer.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
 
     }
 }
