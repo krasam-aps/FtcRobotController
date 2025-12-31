@@ -93,25 +93,39 @@ public class DecodeAuto extends LinearOpMode {
             sleep(1000);
             resetEncoder();
             //turn towards red goal
-            turn(0.9, -170);
+            turn(0.5, -140);
             sleeep(300);
             sleeep(2000); //This simulates the time it takes to launch
-            turn(0.5, 170);
+            turn(0.5, 140);
             sleeep(300);//Previously 1000 milliseconds
-            forward(0.5, 570);
+            forward(0.5, 580);
             sleeep(750);
-            turn(0.5,740);
+            turn(0.5,726);
             sleeep(1000);
-            backwardWintake(0.5, 1800);
+            backwardWintake(0.5, 1000);
             sleeep(2000);
-            forward(0.5,1800);
+            forward(0.5,1000);
+            Intake.setPower(0);
             sleeep(2000);
-            turn(0.5,-740);
+            turn(0.5,-726);
             sleeep(1000);
             forward(0.5, -570);
             sleeep(750);
-            turn(0.5, -170);
+            turn(0.5, -140);
             sleeep(300);
+            sleeep(2000); //Simulates launch
+            turn(0.5, 280);
+            sleeep(300);
+            forward (1, 1000);
+            sleeep(1000);
+            /*forward(0.5, 1000);
+            sleeep(1000);
+            forward(0.5, -1000);
+            sleeep(1000);
+            strafe(1, -1000);
+            sleeep(100);*/
+
+
             /*turn(0.5, 750); //Note to self - exact ticks needed for a 90 degree angle is 750. Sometimes it doesn't work. I wonder why...
             sleeep(1000);
             backwardWintake(0.5, 1800);
