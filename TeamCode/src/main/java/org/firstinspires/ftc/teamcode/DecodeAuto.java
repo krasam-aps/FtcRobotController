@@ -96,7 +96,18 @@ public class DecodeAuto extends LinearOpMode {
             //turn towards red goal
             turn(0.5, -140);
             sleeep(300);
-            sleeep(2000); //This simulates the time it takes to launch
+            Kicker(1, 300);
+            sleeep(500);
+            Spindexer(0.5, 233);
+            sleeep(300);
+            Kicker(1, 300);
+            sleeep(500);
+            Spindexer(0.5, 233);
+            sleeep(300);
+            Kicker(1, 300);
+            sleeep(500);
+            Spindexer(0.5, 350);
+            sleeep(300);
             turn(0.5, 140);
             sleeep(300);//Previously 1000 milliseconds
             forward(0.5, 580);
@@ -114,7 +125,20 @@ public class DecodeAuto extends LinearOpMode {
             sleeep(750);
             turn(0.5, -140);
             sleeep(300);
-            sleeep(2000); //Simulates launch
+            Spindexer(0.5, 150);
+            sleeep(300);
+            Kicker(1, 300);
+            sleeep(500);
+            Spindexer(0.5, 233);
+            sleeep(300);
+            Kicker(1, 300);
+            sleeep(500);
+            Spindexer(0.5, 233);
+            sleeep(300);
+            Kicker(1, 300);
+            sleeep(500);
+            Spindexer(0.5, 350);
+            sleeep(300);
             turn(0.5, 280);
             sleeep(300);
             forward (1, 1000);
@@ -160,7 +184,7 @@ public class DecodeAuto extends LinearOpMode {
             SimpleMotorFeedforward feedforward = new SimpleMotorFeedforward(0, 0.1125, 0.27); //ka=.27
             // 4
             double powerRating = feedforward.calculate(3.4);
-            //double powerRating2 = -1*(feedforward.calculate(3.4));
+            double powerRating2 = -1*(feedforward.calculate(3.4));
             telemetry.addData("Launch1 powerRating: ", powerRating);
             telemetry.update();
             Launch1.setPower(powerRating);
@@ -254,6 +278,20 @@ public class DecodeAuto extends LinearOpMode {
     // aggro him and you will not be spared
 
 
+    public void Kicker(double power, long milliseconds){
+
+
+        /*
+            double KICK_READY_POS = 0.25;
+            double KICK_UP_POS = 0.5;
+         */
+        LeftKicker.setPosition(0.5);
+        RightKicker.setPosition(0.5);
+        sleep(milliseconds);
+        LeftKicker.setPosition(0.25);
+        RightKicker.setPosition(0.25);
+
+    }
     public void Spindexer(double power, int ticks){
         Spindexer.setTargetPosition(ticks);
         Spindexer.setMode(DcMotor.RunMode.RUN_TO_POSITION);
