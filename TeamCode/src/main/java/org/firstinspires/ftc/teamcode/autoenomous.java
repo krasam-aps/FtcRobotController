@@ -126,13 +126,13 @@ public class autoenomous extends LinearOpMode {
     //        | |      |x \    / x|__/___\    "bobuu es dead" - Bob
     //      _|___|_    |_  ( _____(_(_(_(|          I
     //      <---------------------------------------I
-    //     <         SWORD OF THE GREAT BOB         I===============
+    //  < ===        SWORD OF THE GREAT BOB         I===============
     //      <---------------------------------------I
     //        |_|      |  _  |      |               I
     //                 |/   \|
     //                 |     |
     //             /___|     |___\
-    // this is Bobuu, the protector of the fake, snake_case methods
+    // this was Bobuu, the protector of the fake, snake_case methods
     // and now he is ded, k*lled by BOB
     // CAMELCASE HAS RECLAIMED THIS AUTOENOMOUS
     // BOW DOWN TO BOB, THE ULTIMATE DESTROYER
