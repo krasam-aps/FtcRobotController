@@ -43,6 +43,33 @@ public class yatzilsAUTO extends LinearOpMode {
     myYatzilCase - made by Yatzil, and basically SUCKS
     */
 
+    /*
+    QUOTE BOARD -
+    "I will stuff you in a cannon if you don't come by 7:30 tommorow" - Subbu
+    "Odd toe bots, assemble!" - Kayne
+    "CJ! I told you not to eat those specific rocks in order!" - Subbu
+    "I lie to children all the time" - Josh
+    "I am suffering, but correctly" - CJ
+    "Let's bully the elders" - CJ
+    "No... No... No..." - Krish
+    "Dang! I forgot to bring pocket cheese!" - Mason
+    "You'll be able to smell colors after this" - Josh
+    "If I cover myself with locite, will I become loctite king?" - George
+    "Don't you know I want 2 hands on each hand?" - Josh
+    "I clicked, then I clicked, then I moved" - Jannah
+    "
+    "
+    "
+    "
+    "
+    "
+    "
+    "
+    "
+    "
+
+     */
+
 
     public void runOpMode(){
         Fleft = hardwareMap.get(DcMotor.class,"Fleft");

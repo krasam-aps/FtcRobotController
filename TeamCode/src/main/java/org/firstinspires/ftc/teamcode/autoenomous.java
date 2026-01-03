@@ -99,7 +99,7 @@ public class autoenomous extends LinearOpMode {
             resetEncoder();
             turn(0.5, -140);
             sleeep(300);
-            Launch1.setPower(powerRating);
+            Launch1.setPower(powerRating); //bottom
             Launch2.setPower(powerRating); //top
             telemetry.addData("powerRating = ", powerRating);
             telemetry.update();
@@ -116,6 +116,46 @@ public class autoenomous extends LinearOpMode {
             sleeep(500);
             Spindexer(0.8, 376);
             sleeep(300);
+
+            /*
+            turn(0.5, 140);
+            sleeep(300);//Previously 1000 milliseconds
+            forward(0.5, 580);
+            sleeep(750);
+            turn(0.5,726);
+            sleeep(1000);
+            backwardWintake(0.5, 1000);
+            sleeep(2000);
+            forward(0.5,1000);
+            Intake.setPower(0);
+            sleeep(2000);
+            turn(0.5,-726);
+            sleeep(1000);
+            forward(0.5, -570);
+            sleeep(750);
+            turn(0.5, -140);
+            sleeep(300);
+            Spindexer(0.5, 150);
+            sleeep(300);
+            Kicker(1, 300);
+            sleeep(500);
+            Spindexer(0.5, 233);
+            sleeep(300);
+            Kicker(1, 300);
+            sleeep(500);
+            Spindexer(0.5, 233);
+            sleeep(300);
+            Kicker(1, 300);
+            sleeep(500);
+            Spindexer(0.5, 350);
+            sleeep(300);
+            turn(0.5, 280);
+            sleeep(300);
+            forward (1, 1000);
+            sleeep(1000);
+
+
+             */
         }
     }
     
