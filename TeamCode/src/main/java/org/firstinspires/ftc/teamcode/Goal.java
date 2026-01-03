@@ -52,10 +52,10 @@ public class Goal extends LinearOpMode {
             // DRIVE TO SHOOTING POSITION
             // Calculate Feedforward for Shooter
             SimpleMotorFeedforward feedforward = new SimpleMotorFeedforward(0, 0.1125, 0.27);
-            double powerRating = feedforward.calculate(3.4);
+            double powerRating = feedforward.calculate(4.5);
 
             // Drive Backwards
-            forward(0.5, -3000);
+            forward(0.5, -1200);
 
             // SPIN UP FLYWHEEL
             Launch1.setPower(powerRating);
@@ -102,6 +102,7 @@ public class Goal extends LinearOpMode {
 
             //STRAFE
             strafe(1, 1000);
+            sleeep(1000);
         }
     }
 
@@ -304,6 +305,7 @@ public class Goal extends LinearOpMode {
         while (opModeIsActive() && waitTimer.milliseconds() < milliseconds) {
             updateSpindexerPID(1.0); // Hold Spindexer position
         }
+        resetEncoder();
     }
 
     public void initializeHardware() {
