@@ -82,7 +82,7 @@ public class FarLaunchBlueGoal extends LinearOpMode {
             sleeep(300);
 
             // Index Next Ball
-            SpinDexer(0.8, TICKS_PER_CHAMBER);
+            SpinDexer(0.65, TICKS_PER_CHAMBER);
             sleeep(300);
 
             // Shot 2
@@ -90,7 +90,7 @@ public class FarLaunchBlueGoal extends LinearOpMode {
             sleeep(300);
 
             // Index Next Ball
-            SpinDexer(0.8, TICKS_PER_CHAMBER);
+            SpinDexer(0.65, TICKS_PER_CHAMBER);
             sleeep(300);
 
             // Shot 3
@@ -98,7 +98,7 @@ public class FarLaunchBlueGoal extends LinearOpMode {
             sleeep(500);
 
             // Reset SpinDexer
-            SpinDexer(0.8, 376); // Slight extra rotation to clear
+            SpinDexer(0.65, 376); // Slight extra rotation to clear
             sleeep(300);
 
             // Shutdown

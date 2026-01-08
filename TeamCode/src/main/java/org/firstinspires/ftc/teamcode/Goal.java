@@ -76,7 +76,7 @@ public class Goal extends LinearOpMode {
             sleeep(300);
 
             // Index Next Ball
-            Spindexer(0.8, TICKS_PER_CHAMBER);
+            Spindexer(0.65, TICKS_PER_CHAMBER);
             sleeep(300);
 
             // Shot 2
@@ -84,7 +84,7 @@ public class Goal extends LinearOpMode {
             sleeep(300);
 
             // Index Next Ball
-            Spindexer(0.8, TICKS_PER_CHAMBER);
+            Spindexer(0.65, TICKS_PER_CHAMBER);
             sleeep(300);
 
             // Shot 3
@@ -92,7 +92,7 @@ public class Goal extends LinearOpMode {
             sleeep(500);
 
             // Reset Spindexer
-            Spindexer(0.8, 376); // Slight extra rotation to clear
+            Spindexer(0.65, 376); // Slight extra rotation to clear
             sleeep(300);
 
             // Shutdown
